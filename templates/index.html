@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        EduGenie | AI Learning Assistant
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="/static/style.css"
+    >
+
+</head>
+
+
+<body>
+
+    <main class="container">
+
+        <!-- =================================================
+             HEADER
+        ================================================== -->
+
+        <header class="hero">
+
+            <div class="badge">
+                AI LEARNING ASSISTANT
+            </div>
+
+            <h1>
+                EduGenie
+            </h1>
+
+            <p>
+                Ask questions, understand concepts,
+                practice with quizzes, summarize text,
+                and create your learning path with AI.
+            </p>
+
+        </header>
+
+
+        <!-- =================================================
+             INPUT CARD
+        ================================================== -->
+
+        <section class="card">
+
+            <label for="task">
+                Choose a learning task
+            </label>
+
+            <select id="task">
+
+                <option value="qa">
+                    Ask a Question
+                </option>
+
+                <option value="explain">
+                    Explain a Concept
+                </option>
+
+                <option value="quiz">
+                    Generate a Quiz
+                </option>
+
+                <option value="summarize">
+                    Summarize Text
+                </option>
+
+                <option value="learn">
+                    Learning Path
+                </option>
+
+            </select>
+
+
+            <label
+                for="inputText"
+                id="inputLabel"
+            >
+                Your question
+            </label>
+
+
+            <textarea
+                id="inputText"
+                rows="9"
+                placeholder="Example: Which is the largest ocean?"
+            ></textarea>
+
+
+            <!-- Learning level -->
+
+            <div
+                id="levelWrap"
+                class="hidden"
+            >
+
+                <label for="level">
+                    Your level
+                </label>
+
+                <select id="level">
+
+                    <option value="beginner">
+                        Beginner
+                    </option>
+
+                    <option value="intermediate">
+                        Intermediate
+                    </option>
+
+                    <option value="advanced">
+                        Advanced
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <button id="submitBtn">
+                Ask EduGenie
+            </button>
+
+
+            <p
+                id="status"
+                class="status"
+                aria-live="polite"
+            ></p>
+
+        </section>
+
+
+        <!-- =================================================
+             RESULT CARD
+        ================================================== -->
+
+        <section
+            id="resultCard"
+            class="card result-card hidden"
+        >
+
+            <div class="result-heading">
+
+                <h2>
+                    EduGenie Result
+                </h2>
+
+                <button
+                    id="copyBtn"
+                    class="secondary"
+                >
+                    Copy
+                </button>
+
+            </div>
+
+
+            <div id="result"></div>
+
+        </section>
+
+
+        <!-- =================================================
+             FOOTER
+        ================================================== -->
+
+        <footer>
+
+            EduGenie
+            •
+            FastAPI
+            +
+            Google Gemini
+            •
+            Built for learning
+
+        </footer>
+
+    </main>
+
+
+    <script src="/static/app.js"></script>
+
+</body>
+
+</html>
